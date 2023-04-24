@@ -1,5 +1,6 @@
 import postgres from 'postgres';
 
+// Singleton class for DB connection
 class DBClient {
     private static instance: DBClient;
     private client: any;
@@ -25,15 +26,5 @@ class DBClient {
     };
     getClient = () => this.client;
 }
-// const getClient = async () => {
-//     const client = await postgres(process.env.NEXT_PUBLIC_DATABASE_URL || '', {
-//         host: process.env.NEXT_PUBLIC_PGHOST,
-//         port: 5432,
-//         database: process.env.NEXT_PUBLIC_PGDATABASE,
-//         username: process.env.NEXT_PUBLIC_PGUSER,
-//         password: process.env.NEXT_PUBLIC_PGPASSWORD,
-//     });
-//     return client;
-// };
 export { DBClient };
 

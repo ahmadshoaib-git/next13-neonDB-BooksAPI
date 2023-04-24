@@ -4,7 +4,7 @@ import { BooksService } from '../../../services/books';
 import { IBook } from '../../../services/books/books.interface';
 import { IError } from '../../../services/errorInterface';
 
-export async function GET(req: NextApiRequest, res: NextApiResponse<IBook | IError>) {
+export async function GET(res: NextApiResponse<IBook | IError>) {
     try {
         const data = await BooksService.fetchAllBooks();
         return NextResponse.json(data);
