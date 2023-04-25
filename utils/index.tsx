@@ -1,4 +1,5 @@
 import postgres from 'postgres';
+import { textChangeRangeNewSpan } from 'typescript';
 
 // Singleton class for DB connection
 class DBClient {

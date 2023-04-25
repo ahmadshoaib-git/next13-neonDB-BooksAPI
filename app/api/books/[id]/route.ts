@@ -1,8 +1,6 @@
 // import { NextApiRequest, NextApiResponse } from 'next';
 import { NextRequest, NextResponse } from 'next/server';
 import { BooksService } from '../../../../services/books';
-import { IBook } from '../../../../services/books/books.interface';
-import { IError } from '../../../../services/errorInterface';
 
 export async function GET(req: NextRequest, { params }: any) {
     try {

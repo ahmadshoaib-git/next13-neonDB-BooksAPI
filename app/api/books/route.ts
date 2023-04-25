@@ -1,4 +1,4 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+import { NextApiResponse } from 'next';
 import { NextResponse } from 'next/server';
 import { BooksService } from '../../../services/books';
 import { IBook } from '../../../services/books/books.interface';
