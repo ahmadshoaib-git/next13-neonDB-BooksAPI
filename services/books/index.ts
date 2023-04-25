@@ -6,7 +6,7 @@ export class BooksService {
         try {
             const client = new DBClient();
             const sql = await client.getClient();
-            const result: Array<IBook> = await sql`SELECT * FROM books`;
+            const result: any = await sql`SELECT bookid,bookname,booktype,available FROM books`;
             return result;
         } catch (error) {
             console.error('Error executing SQL query:', error);
